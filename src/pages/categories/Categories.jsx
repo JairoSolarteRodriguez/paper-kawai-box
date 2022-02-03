@@ -1,4 +1,4 @@
-import CategoryMenu from '../../components/CategoryMenu/CategoryMenu'
+import CategoryMenu from '../../components/Categories/ListOfCategories'
 
 const Categories = () =>{
   return<>

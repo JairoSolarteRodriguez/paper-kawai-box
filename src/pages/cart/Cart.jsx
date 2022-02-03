@@ -1,7 +1,14 @@
+import VoidCart from "components/Cart/VoidCart"
+import MyCart from "components/Cart/MyCart"
+
 const Cart = () =>{
+  const productsInCart = []
+
   return(
     <>
-      <h1>Paper Kawai Box | Cart</h1>
+      {
+        productsInCart.length === 0 ? <VoidCart/> : <MyCart products={productsInCart}/>
+      }
     </>
   )
 }

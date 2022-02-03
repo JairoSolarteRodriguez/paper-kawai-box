@@ -1,11 +1,11 @@
-import ListOfProducts from "components/ListOfProducts/ListOfProducts"
-import { useParams } from "react-router-dom"
+import ListOfProducts from "components/Product/ListOfProducts"
+import ListOfCategories from "components/Categories/ListOfCategories"
 
 const Products = () =>{
-  const { best } = useParams()
-  
+
   return(
     <>
+      <ListOfCategories/>
       <ListOfProducts/>
     </>
   )
