@@ -6,6 +6,7 @@ import Products from './pages/products/Products';
 import Categories from './pages/categories/Categories'
 import Cart from './pages/cart/Cart'
 import Navbar from 'components/Navbar/Nabar';
+import Footer from 'components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/categories' element={<Categories/>}/>
         <Route path='/cart' element={<Cart/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }

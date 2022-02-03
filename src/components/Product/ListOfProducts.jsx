@@ -1,6 +1,7 @@
 import Product from 'components/Product/Product'
 import {allProducts} from '../../services/data'
 import { useParams } from "react-router-dom"
+import BestProduct from './BestProduct'
 
 
 const ListOfProducts = () => {
@@ -13,20 +14,15 @@ const ListOfProducts = () => {
     
     {
       allProducts.map(({ id, name, shortDescription, image, amount, bestSeller }) => {
-        if(best){
-          let products = []
+        // if(best){
+        //   <BestProduct bestSeller={bestSeller} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount}/>
+        // }
 
-          if(bestSeller !== true){                  
-            products.push({ id, name, shortDescription, image, amount })
-
-            products.map(( { id, name, shortDescription, image, amount } ) => (
-              <Product key={id} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount}/>
-            ))
-          }else return null
-        }
+        <BestProduct bestSeller={bestSeller}/>
         
+        console.log(best)
         return <Product key={id} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount}/>
-    })
+      })
     }
   </>
 }
