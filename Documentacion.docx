@@ -1,0 +1,3 @@
+dependecias: react-router-dom
+
+productos bd: se manejaron los productos como productos estaticos en el archivo data.js
