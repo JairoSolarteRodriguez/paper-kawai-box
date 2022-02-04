@@ -1,0 +1,27 @@
+*{
+  --font-cabin-sketch: 'Cabin Sketch', cursive;
+  --morado-oscuro: #362270;
+}
+
+.title{
+  font-family: var(--font-cabin-sketch);
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.paragraph{
+  font-family: var(--font-cabin-sketch);
+  font-weight: regular;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+}
+
+.name{
+  color: var(--morado-oscuro);
+}
+
+main{
+  padding: 1rem;
+}

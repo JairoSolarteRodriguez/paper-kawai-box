@@ -1,0 +1,28 @@
+*{
+  --amarillo: #D6C517;
+  --gris-text-: #3D3D3D;
+  --font-button-normal: 'Cabin', sans-serif;
+  --font-button-cursive: 'Cabin Sketch', cursive;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--amarillo);
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--gris-text-);
+  font-family: var(--font-button-normal);
+}
+
+.containerButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons img{
+  margin-right: 0.5rem;
+}

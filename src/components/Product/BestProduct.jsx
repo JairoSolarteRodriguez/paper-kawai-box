@@ -1,20 +1,17 @@
 import Product from "./Product"
 
 const BestProduct = ( props ) => {
-  const { bestSeller, id, name, shortDescription, image, amount } = props
+  const { bestSeller, id, name, shortDescription, image, amount, price } = props
   let products = []
   
-  // if(bestSeller === true){
-  //   products.push({ bestSeller, id, name, shortDescription, image, amount })
-  // } else return null
-  products.push({ bestSeller, id, name, shortDescription, image, amount })
+  products.push({ bestSeller, id, name, shortDescription, image, amount, price })
 
 
   return <>
     {
       bestSeller === true ? (
-        (products.map(( { id, name, shortDescription, image, amount } ) => (
-          <Product key={id} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount}/>
+        (products.map(( { id, name, shortDescription, image, amount, price } ) => (
+          <Product key={id} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount} price={price}/>
         )))
       ) : null
       

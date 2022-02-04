@@ -1,0 +1,25 @@
+*{
+  --morado-claro: #684BBD;
+  --gris-text: #3D3D3D;
+  --font-button-normal: 'Cabin', sans-serif;
+  --font-button-cursive: 'Cabin Sketch', cursive;
+  padding: 0;
+}
+
+.footer{
+  background: var(--morado-claro);
+  padding: 1rem;
+  margin-top: 1.982rem;
+}
+
+.footer p{
+  margin: 0;
+  color: #fff;
+}
+
+.footer a{
+  color: #fff;
+  font-weight: bold;
+  font-family: var(--font-button-normal);
+  cursor: pointer
+}

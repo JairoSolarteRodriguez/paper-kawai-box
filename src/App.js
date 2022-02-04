@@ -7,11 +7,13 @@ import Categories from './pages/categories/Categories'
 import Cart from './pages/cart/Cart'
 import Navbar from 'components/Navbar/Nabar';
 import Footer from 'components/Footer/Footer';
+import { CartContextProvider } from 'context/CartContext';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
+      <CartContextProvider>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/products' element={<Products/>}/>
@@ -20,6 +22,7 @@ function App() {
         <Route path='/categories' element={<Categories/>}/>
         <Route path='/cart' element={<Cart/>}/>
       </Routes>
+      </CartContextProvider>
       <Footer/>
     </div>
   );
