@@ -1,7 +1,12 @@
+import ListOfProducts from "components/Product/ListOfProducts"
+import ListOfCategories from "components/Categories/ListOfCategories"
+
 const Products = () =>{
+
   return(
     <>
-      <h1>Paper Kawai Box | Products</h1>
+      <ListOfCategories/>
+      <ListOfProducts/>
     </>
   )
 }
