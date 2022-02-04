@@ -1,7 +1,7 @@
 import productCartIcon from '../../assets/icons/productCartIcon.svg'
 
 const Product = ( props ) => {
-  const { id, name, shortDescription, image, amount } = props 
+  const { id, name, shortDescription, image, amount, price } = props 
   
   const addToCart = () => {
     console.log(`Agregado producto numero: ${id}`)
@@ -12,7 +12,8 @@ const Product = ( props ) => {
     <p>{shortDescription}</p>
     <img src={image} alt={name} width='200px'/>
     <br/>
-    <span>{amount}</span>
+    <span>{amount}</span><br/>
+    <span>{price}</span>
     <button onClick={addToCart}>
       <img src={productCartIcon} alt="carrito de producto" />
     </button>

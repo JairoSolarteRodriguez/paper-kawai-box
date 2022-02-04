@@ -13,15 +13,12 @@ const ListOfProducts = () => {
     }
     
     {
-      allProducts.map(({ id, name, shortDescription, image, amount, bestSeller }) => {
-        // if(best){
-        //   <BestProduct bestSeller={bestSeller} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount}/>
-        // }
+      allProducts.map(({ id, name, shortDescription, image, amount, bestSeller, price }) => {
+        if(best){
+          return <BestProduct key={id} bestSeller={bestSeller} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount}/>
+        }
 
-        <BestProduct bestSeller={bestSeller}/>
-        
-        console.log(best)
-        return <Product key={id} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount}/>
+          return <Product key={id} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount} price={price}/>
       })
     }
   </>
