@@ -1,17 +1,17 @@
 import Product from "./Product"
 
-const BestProduct = ( props ) => {
-  const { bestSeller, id, name, shortDescription, image, amount, price } = props
-  let products = []
+const BestProduct = ( {data, addToCart} ) => {
+  const { bestSeller, id, name, shortDescription, image, amount, price } = data
   
+  let products = []
   products.push({ bestSeller, id, name, shortDescription, image, amount, price })
 
 
   return <>
     {
       bestSeller === true ? (
-        (products.map(( { id, name, shortDescription, image, amount, price } ) => (
-          <Product key={id} id={id} name={name} shortDescription={shortDescription} image={image} amount={amount} price={price}/>
+        (products.map((productData) => (
+          <Product key={productData.id} addToCart={addToCart} data={productData}/>
         )))
       ) : null
       

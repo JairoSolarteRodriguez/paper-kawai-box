@@ -1,3 +1,7 @@
+*{
+  --font-funy: 'Cabin Sketch' serif;
+}
+
 .navbar{
   display: flex;
   align-items: center;
@@ -9,7 +13,41 @@
   display: none;
 }
 
+.active{
+  display: block;
+  position: absolute;
+  background: #816ac8f1;
+  height: 70vh;
+  top: 0;
+  left: 0;
+  list-style: none;
+  width: 70%;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 10px 0;
+}
+
+.active li {
+  padding: 1rem 1rem;
+  width: 80%;
+  border-bottom: 2px solid white;
+  margin: 0;
+}
+
+.active li a{
+  color: white;
+  font-family: var(--font-funy);
+  display: block;
+  width: 100%;
+}
+
 .buttonMenuMobile{
   background: none;
   border: none;
+}
+
+header{
+  height: 120px;
 }

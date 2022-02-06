@@ -4,10 +4,10 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home';
 import Products from './pages/products/Products';
 import Categories from './pages/categories/Categories'
-import Cart from './pages/cart/Cart'
 import Navbar from 'components/Navbar/Nabar';
 import Footer from 'components/Footer/Footer';
 import { CartContextProvider } from 'context/CartContext';
+import Cart from 'pages/cart/Cart';
 
 function App() {
   return (

@@ -1,11 +1,29 @@
-import Button from "components/Button/Button"
+import './cart.css'
 
 const MyCart = ( props ) =>{
-  let { products } = props
+  let { data, delToCart } = props
+
   return <>
-      <h2>Mi carrito de compras elementos: {products.length}</h2>
-      <Button icon={'trash'} text={'Eliminar TODOS los productos del carrito'}/> <br/> 
-      <Button icon={'cart'} text={'Ir a comprar mas productos'}/>
+      {
+        data.map(({ id, name, quantity, price, shortDescription, image })=> {
+          return(
+            <div key={id} className='card-product'>
+              <section className='info-product'>
+                <div>
+                  <img src={image} alt={name} />
+                  <p>${price * quantity}</p>
+                </div>
+                <div>
+                  <h3>{name} ({quantity})</h3>
+                  <p>{shortDescription}</p>
+                </div>
+              </section>
+              <button onClick={() => delToCart(id)}>Eliminar Uno</button>
+              <button onClick={() => delToCart(id, true)}>Eliminar Todos</button>
+            </div>
+          )
+        })
+      }
   </>
 }
 

@@ -1,0 +1,62 @@
+*{
+  --dark-purple: #684BBD;
+  --purple: #684cbdd4;
+  --font-normal: 'Cabin', sans-serif;
+
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #737373;
+}
+
+.product{
+  margin-bottom: 3rem;
+  background: var(--purple);
+  border: 3px solid var(--dark-purple);
+  border-radius: 10px;
+}
+
+.product img{
+  width: 100%;
+  max-width: 272px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.product h3, .product p, .product span{
+  color: white;
+  font-family: var(--font-normal);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.product p{
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button{
+  background: none;
+  border: none;
+  width: 50px;
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
+}

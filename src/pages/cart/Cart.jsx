@@ -1,18 +1,22 @@
 import VoidCart from "components/Cart/VoidCart"
 import MyCart from "components/Cart/MyCart"
-import { useContext } from "react"
-import CartContext from "context/CartContext"
+import './cart.css'
 
 const Cart = () =>{
-  const { products } = useContext(CartContext)
-  console.log(products)
+  let data = localStorage.getItem('cart')
+  const products = JSON.parse(data)
 
   return(
-    <>
+    <div className='cart-menu'>
       {
-        products.length === 0 ? <VoidCart/> : <MyCart products={products}/>
+        data.length === 0 ?
+         <VoidCart/> :
+        <>
+           <MyCart data={products}/>
+           <button className='remove-all'>Eliminar TODOS los productos del carrito</button> 
+        </>
       }
-    </>
+    </div>
   )
 }
 

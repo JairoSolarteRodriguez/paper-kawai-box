@@ -1,0 +1,30 @@
+li, li a div, li a div img{
+  width: 120px;
+  /* height: 120px; */
+}
+
+li a div h3{
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+li{
+  margin: 0.5rem;
+}
+
+li a{
+  color: #000;
+  text-decoration: none;
+}
+
+.wraper{
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+}
+
+.wraper::-webkit-scrollbar{
+  width: 0px;
+}

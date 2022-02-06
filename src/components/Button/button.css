@@ -1,6 +1,6 @@
 *{
-  --amarillo: #D6C517;
-  --gris-text-: #3D3D3D;
+  --yellow: #D6C517;
+  --gray-text-: #3D3D3D;
   --font-button-normal: 'Cabin', sans-serif;
   --font-button-cursive: 'Cabin Sketch', cursive;
 }
@@ -9,12 +9,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--amarillo);
+  background: var(--yellow);
   padding: 1rem 3rem;
   border-radius: 10px;
   text-decoration: none;
-  color: var(--gris-text-);
+  color: var(--gray-text-);
   font-family: var(--font-button-normal);
+  font-size: 1.3rem;
 }
 
 .containerButton{
