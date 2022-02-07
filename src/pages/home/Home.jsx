@@ -3,7 +3,7 @@ import './home.css'
 
 const Home = () =>{
   return(
-    <main>
+    <main className="home">
       <h1 className="title">Bienvenidos a <span className="name">Paper Kawai Box</span> cajitas llenas de felicidad</h1>
 
       <p className="paragraph">Tienda en línea minorista que ofrece artículos de papelería con diseños llamativos y sobrios</p>

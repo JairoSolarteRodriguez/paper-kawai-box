@@ -4,8 +4,8 @@ import { useReducer } from 'react'
 import { TYPES } from 'services/actions/CartActions'
 import { cartInitialState, cartReducer } from 'reducers/CartReducer'
 import { useParams } from "react-router-dom"
+import Cart from 'pages/cart/Cart'
 
-localStorage.setItem('cart', [])
 
 const ListOfProducts = () => {
   const { best } = useParams()
@@ -13,17 +13,27 @@ const ListOfProducts = () => {
 
   const [state, dispatch] = useReducer(cartReducer, cartInitialState)
   const { products, cart } = state
-
-  if(cart.length >= 1){
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }
   
   
   const addToCart = (id) => {
     dispatch({type: TYPES.add, payload: id})
   }
 
+  const clearCart = () => {
+    dispatch({type: TYPES.clearCart})
+  }
+
+  const delToCart = (id, all = false) => {
+    if(all){
+      dispatch({type: TYPES.removeAll, payload: id})
+    }else{
+      dispatch({type: TYPES.removeOne, payload: id})
+    }
+  }
+
   return<main>
+    <Cart data={cart} clearCart={clearCart} delToCart={delToCart}/>
+
     { 
       best ? <h2>Productos mas vendidos</h2> : <h2>Todos los productos</h2>
     }

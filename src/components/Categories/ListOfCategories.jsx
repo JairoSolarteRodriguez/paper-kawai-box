@@ -6,7 +6,7 @@ import './categories.css'
 const Categories = () =>{
   return(
     <>
-      <nav>
+      <nav className="nav-category">
        <ul className="wraper">
          {
            allCategories.map(({ id, name, image, active }) => {

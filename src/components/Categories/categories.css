@@ -3,6 +3,10 @@ li, li a div, li a div img{
   /* height: 120px; */
 }
 
+.nav-category{
+  margin-top: 130px;
+}
+
 li a div h3{
   font-size: 1rem;
   text-align: center;

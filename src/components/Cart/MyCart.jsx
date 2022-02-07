@@ -3,6 +3,8 @@ import './cart.css'
 const MyCart = ( props ) =>{
   let { data, delToCart } = props
 
+
+
   return <>
       {
         data.map(({ id, name, quantity, price, shortDescription, image })=> {

@@ -25,6 +25,10 @@
   color: var(--morado-oscuro);
 }
 
+.home{
+  margin-top: 130px;
+}
+
 main{
   padding: 1rem;
 }

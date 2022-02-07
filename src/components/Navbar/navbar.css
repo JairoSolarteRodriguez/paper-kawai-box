@@ -9,16 +9,23 @@
   padding: 1rem;
 }
 
-.menuMobile{
+.menu-mobile{
   display: none;
+}
+.fixed{
+  position:fixed;
+  z-index: 10000;
+  top: 0;
+  background: #fff;
+  width: 95vw;
 }
 
 .active{
   display: block;
   position: absolute;
   background: #816ac8f1;
-  height: 70vh;
-  top: 0;
+  /* height: 70vh; */
+  top: 100px;
   left: 0;
   list-style: none;
   width: 70%;

@@ -2,7 +2,7 @@ export const allCategories = [
   {
     id: 1,
     name: 'Agendas',
-    image: 'https://chi01pap002files.storage.live.com/y4mz_8-3xZ_AeCqCj03QIAXgraQyvMCjKvZHFSvs-acM0Nab594wsQdDdczxUVZwX1EyIJ08azBT4H-A5KxelQvpl6VBfKoc3bNjVAPjDfNb2hQkj680VTgHzFVqQStMMY3iHVByVBN5qICYt75Fff4FMNQncZFjlMFe8epyDqK63Y-LWANFnq4eSoPw2OHFzrH?width=223&height=256&cropmode=none',
+    image: 'https://chi01pap002files.storage.live.com/y4mzVYnOgOzgdWcmW5GL3X9QW2DvYDuCTMuyl0iIk850CHUYXmMmgcMb6yiDX2ltKDkqy6_3lOkDC1qtlL2H5nzn0v1-U-3p6aZ1nt5eornRByegiAZnPcGJ2K601Z3mbKcnfTjm80fxhuC99OjvETcgo6aZ8CVAMlAKXh9w3cbzWAvlVGHxCzBEooQUZKeFknd?width=223&height=256&cropmode=none',
     active: true,
   },{
     id: 2,

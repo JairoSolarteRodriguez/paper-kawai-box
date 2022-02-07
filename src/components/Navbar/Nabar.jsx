@@ -3,32 +3,27 @@ import { Link } from 'react-router-dom'
 import mainLogo from 'assets/icons/mainLogo.svg'
 import menuIcon from 'assets/icons/menuIcon.svg'
 import cartMenu from 'assets/icons/cartMenu.svg'
+import closeIcon from 'assets/icons/closeIcon.svg'
 import './navbar.css'
 
 
 const Navbar = () => {
   const [active, setActive] = useState(false)
 
-  const toggleMenu = () => {
+  const toggleActive = () => {
     setActive(!active)
   }
-
-  const removeMenu = () => {
-    setTimeout(() => {
-      setActive(!active)
-    }, 1);
-  }
-
-  return<>
+ 
+ return<>
   <header>
-    <nav className='navbar'>
-      <button className='buttonMenuMobile' onClick={toggleMenu} onBlur={removeMenu}>
-        <img src={menuIcon} alt="icono menu" />
+    <nav className='navbar fixed'>
+      <button className='buttonMenuMobile' onClick={toggleActive} onSuspend={toggleActive}>
+        <img src={active? closeIcon : menuIcon} alt="icono menu" />
       </button>
       <Link to='/'>
         <img src={mainLogo} alt="Logo paper kawai box" />
       </Link>
-      <ul className={active ? 'menuMobile active' : 'menuMobile'}>
+      <ul className={active ? 'menu-mobile active' : 'menu-mobile'}>
         <li><Link to='/'>Inicio</Link></li>
         <li><Link to='/products'>Productos</Link></li>
         <li><Link to='/products/best-seller'>Productos mas vendidos</Link></li>
