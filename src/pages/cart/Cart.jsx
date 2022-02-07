@@ -1,7 +1,6 @@
 import VoidCart from "components/Cart/VoidCart"
 import MyCart from "components/Cart/MyCart"
 import './cart.css'
-import { Link } from "react-router-dom"
 
 const Cart = ({ data = [], clearCart, delToCart}) =>{
   
@@ -14,7 +13,7 @@ const Cart = ({ data = [], clearCart, delToCart}) =>{
   // Define msg for whatsapp message.
   let msg = ``
   let msgTotal = `*TOTAL: $${finalTotal} pesos* %0D%0A`
-  let msgStart = `Buenos dias envio el pedido:  %0D%0A ${msg}`
+  let msgStart = `*Hola envío el pedido espero confirmación:* %0D%0A ${msg}`
   data.map(({name, quantity, price}) => msg += `${name} ${price}X(${quantity})=${price * quantity} %0D%0A`)
   let msgFinal = `${msgStart} ${msg} ${msgTotal}`
 
@@ -25,10 +24,9 @@ const Cart = ({ data = [], clearCart, delToCart}) =>{
         data.length === 0 ?
          <VoidCart/> :
         <>
-          <Link to='/cart/elements' element={<MyCart data={data} delToCart={delToCart} total={total}/>}>Ir al carrito</Link>
-           {/* <MyCart data={data} delToCart={delToCart} total={total}/> */}
+           <MyCart data={data} delToCart={delToCart} total={total}/>
            <button className='remove-all' onClick={clearCart}>Eliminar TODOS los productos del carrito</button>
-            <a className='validate-order' href={`https://api.whatsapp.com/send/?phone=573106954672&text=${msgFinal}`} target='_blank'>Validar Compra</a>
+            <a className='validate-order' href={`https://api.whatsapp.com/send/?phone=573106954672&text=${msgFinal}`} target='_blank' rel="noreferrer">Validar Compra por el valor de ${finalTotal}</a>
         </>
       }
     </div>
