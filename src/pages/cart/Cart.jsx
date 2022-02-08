@@ -2,7 +2,7 @@ import VoidCart from "components/Cart/VoidCart"
 import MyCart from "components/Cart/MyCart"
 import './cart.css'
 
-const Cart = ({ data = [], clearCart, delToCart}) =>{
+const Cart = ({ data = [], clearCart, delToCart, showCart}) =>{
   
   // Get array whit total price
   let total = data.map(({quantity, price}) => (quantity * price))
@@ -17,9 +17,8 @@ const Cart = ({ data = [], clearCart, delToCart}) =>{
   data.map(({name, quantity, price}) => msg += `${name} ${price}X(${quantity})=${price * quantity} %0D%0A`)
   let msgFinal = `${msgStart} ${msg} ${msgTotal}`
 
-
   return(
-    <div className='cart-menu'>
+    <div className={showCart ? 'show-cart' : 'hidde-cart'}>
       {
         data.length === 0 ?
          <VoidCart/> :
