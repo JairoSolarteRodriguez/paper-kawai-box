@@ -6,7 +6,6 @@ import Products from './pages/products/Products';
 import Categories from './pages/categories/Categories'
 import Navbar from 'components/Navbar/Nabar';
 import Footer from 'components/Footer/Footer';
-import Cart from 'pages/cart/Cart';
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
           <Route exact path='/products/:best' element={<Products/>}/>
           <Route exact path='/products/search/:catSearch' element={<Products/>}/>
           <Route exact path='/categories' element={<Categories/>}/>
-          <Route exact path='/cart' element={<Cart/>}/>
         </Routes>
       <Footer/>
     </div>

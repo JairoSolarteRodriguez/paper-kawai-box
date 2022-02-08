@@ -5,7 +5,8 @@ import { TYPES } from 'services/actions/CartActions'
 import { cartInitialState, cartReducer } from 'reducers/CartReducer'
 import { useParams } from "react-router-dom"
 import Cart from 'pages/cart/Cart'
-
+import cartButton from '../../assets/icons/cartButton.svg'
+import './product.css'
 
 const ListOfProducts = () => {
   const { best } = useParams()
@@ -17,6 +18,7 @@ const ListOfProducts = () => {
   
   const addToCart = (id) => {
     dispatch({type: TYPES.add, payload: id})
+    // alert('Producto agregado')
   }
 
   const clearCart = () => {
@@ -31,7 +33,15 @@ const ListOfProducts = () => {
     }
   }
 
+  let allQuantity = cart.map(({quantity}) => quantity)
+  let showQuantity = allQuantity.reduce((a, b) => a + b, 0)
+
   return<main>
+    <button onClick={()=>console.log('cart')} className='cart-button'>
+      <span className='show-quantity'>{showQuantity >= 9 ? '+9' : showQuantity}</span>
+      <img src={cartButton} alt="" />
+    </button>
+
     <Cart data={cart} clearCart={clearCart} delToCart={delToCart}/>
 
     { 

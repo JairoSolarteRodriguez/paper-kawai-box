@@ -17,24 +17,18 @@ const Navbar = () => {
  return<>
   <header>
     <nav className='navbar fixed'>
-      <button className='buttonMenuMobile' onClick={toggleActive} onSuspend={toggleActive}>
-        <img src={active? closeIcon : menuIcon} alt="icono menu" />
-      </button>
       <Link to='/'>
         <img src={mainLogo} alt="Logo paper kawai box" />
       </Link>
+      <button className='buttonMenuMobile' onClick={toggleActive} onSuspend={toggleActive}>
+        <img src={active? closeIcon : menuIcon} alt="icono menu" />
+      </button>
       <ul className={active ? 'menu-mobile active' : 'menu-mobile'}>
         <li><Link to='/'>Inicio</Link></li>
         <li><Link to='/products'>Productos</Link></li>
         <li><Link to='/products/best-seller'>Productos mas vendidos</Link></li>
         <li><Link to='/categories'>Categorias</Link></li>
-        <li><Link to='/cart'>Carrito</Link></li>
       </ul>
-      <Link to='/cart'>
-        <button className='buttonMenuMobile'>
-          <img src={cartMenu} alt="" />
-        </button>
-      </Link>
     </nav>
 
   </header>
