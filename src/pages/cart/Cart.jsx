@@ -12,10 +12,10 @@ const Cart = ({ data = [], clearCart, delToCart, showCart}) =>{
 
   // Define msg for whatsapp message.
   let msg = ``
-  let msgTotal = `*TOTAL: $${finalTotal} pesos* %0D%0A`
+  let msgTotal = `*TOTAL: $${new Intl.NumberFormat("es-CO").format(finalTotal)} cop* %0D%0A`
   let msgStart = `*Hola envío el pedido espero confirmación:* %0D%0A ${msg}`
   data.map(({name, quantity, price}) => msg += `${name} ${price}X(${quantity})=${price * quantity} %0D%0A`)
-  let msgFinal = `${msgStart} ${msg} ${msgTotal}`
+  let msgFinal = `${msgStart}${msg} ${msgTotal}`
 
   return(
     <div className={showCart ? 'show-cart' : 'hidde-cart'}>
@@ -25,7 +25,7 @@ const Cart = ({ data = [], clearCart, delToCart, showCart}) =>{
         <>
            <MyCart data={data} delToCart={delToCart} total={total}/>
            <button className='remove-all' onClick={clearCart}>Eliminar TODOS los productos del carrito</button>
-            <a className='validate-order' href={`https://api.whatsapp.com/send/?phone=573106954672&text=${msgFinal}`} target='_blank' rel="noreferrer">Validar Compra por el valor de ${finalTotal}</a>
+            <a className='validate-order' href={`https://api.whatsapp.com/send/?phone=573105629989&text=${msgFinal}`} target='_blank' rel="noreferrer">Validar Compra por el valor de ${new Intl.NumberFormat("es-CO").format(finalTotal)}</a>
         </>
       }
     </div>

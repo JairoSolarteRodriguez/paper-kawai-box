@@ -23,7 +23,8 @@ h2{
 
 .product img{
   width: 100%;
-  max-width: 272px;
+  width: 272px;
+  max-height: 180px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
 }
@@ -56,9 +57,9 @@ button{
 section{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
-  justify-content: center;
+
 }
 
 .cart-button{
@@ -66,10 +67,16 @@ section{
   bottom: 0;
   right: 10%;
   z-index: 1000000;
+  cursor: pointer;
 }
 
 .cart-button img{
   width: 60px;
+}
+
+.product button .add-cart{
+  width: 100%;
+  cursor: pointer;
 }
 
 .show-quantity{

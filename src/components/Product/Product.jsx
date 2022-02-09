@@ -11,10 +11,10 @@ const Product = ( { data, addToCart} ) => {
       <div>
         <h3>{name}</h3>
         <p>{shortDescription}</p>
-        <p>${price * amount}</p>
+        <p>${new Intl.NumberFormat("es-CO").format(price * amount)} cop</p>
       </div>
       <button onClick={() => addToCart(id)}>
-        <img src={productCartIcon} alt="carrito de producto" />
+        <img className='add-cart' src={productCartIcon} alt="carrito de producto" />
       </button>
     </div>
   </div>

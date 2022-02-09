@@ -13,7 +13,7 @@ const MyCart = ( props ) =>{
               <section className='info-product'>
                 <div>
                   <img src={image} alt={name} />
-                  <p>${price * quantity}</p>
+                  <p>${new Intl.NumberFormat("es-CO").format(price * quantity)} cop</p>
                 </div>
                 <div>
                   <h3>{name} ({quantity})</h3>
