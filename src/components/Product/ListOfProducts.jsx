@@ -1,10 +1,10 @@
-import Product from 'components/Product/Product'
+import Product from '../../components/Product/Product'
 import BestProduct from './BestProduct'
 import { useReducer, useState } from 'react'
-import { TYPES } from 'services/actions/CartActions'
-import { cartInitialState, cartReducer } from 'reducers/CartReducer'
+import { TYPES } from '../../services/actions/CartActions'
+import { cartInitialState, cartReducer } from '../../reducers/CartReducer'
 import { useParams } from "react-router-dom"
-import Cart from 'pages/cart/Cart'
+import Cart from '../../pages/cart/Cart'
 import cartButton from '../../assets/icons/cartButton.svg'
 import './product.css'
 
@@ -44,7 +44,7 @@ const ListOfProducts = () => {
 
   return<main>
     <button onClick={setShowCart} className='cart-button'>
-      <span className='show-quantity'>{showQuantity >= 9 ? '+9' : showQuantity}</span>
+      <span className='show-quantity'>{showQuantity > 9 ? '+9' : showQuantity}</span>
       <img src={cartButton} alt="" />
     </button>
 

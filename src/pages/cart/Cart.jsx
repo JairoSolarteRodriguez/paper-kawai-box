@@ -1,5 +1,5 @@
-import VoidCart from "components/Cart/VoidCart"
-import MyCart from "components/Cart/MyCart"
+import VoidCart from "../../components/Cart/VoidCart"
+import MyCart from "../../components/Cart/MyCart"
 import './cart.css'
 
 const Cart = ({ data = [], clearCart, delToCart, showCart}) =>{

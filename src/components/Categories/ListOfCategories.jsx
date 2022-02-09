@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { allCategories } from "services/data"
+import { allCategories } from './../../services/data'
 import Category from "./Category"
 import './categories.css'
 

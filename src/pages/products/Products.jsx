@@ -1,5 +1,5 @@
-import ListOfProducts from "components/Product/ListOfProducts"
-import ListOfCategories from "components/Categories/ListOfCategories"
+import ListOfProducts from "../../components/Product/ListOfProducts"
+import ListOfCategories from "../../components/Categories/ListOfCategories"
 
 const Products = () =>{
 

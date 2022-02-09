@@ -1,5 +1,5 @@
-import { TYPES } from "services/actions/CartActions"
-import { allProducts } from "services/data"
+import { TYPES } from '../services/actions/CartActions'
+import { allProducts } from '../services/data'
 
 export const cartInitialState = {
   products : allProducts,
