@@ -48,3 +48,8 @@
   justify-content: space-evenly;
   margin-bottom: 1rem;
 }
+
+.card-product .remove-all{
+  float: right;
+  width: 20px;
+}

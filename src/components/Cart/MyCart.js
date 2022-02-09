@@ -10,6 +10,7 @@ const MyCart = ( props ) =>{
         data.map(({ id, name, quantity, price, shortDescription, image })=> {
           return(
             <div key={id} className='card-product'>
+              <button onClick={() => delToCart(id, true)} className='remove-all'>X</button>
               <section className='info-product'>
                 <div>
                   <img src={image} alt={name} />
@@ -20,8 +21,7 @@ const MyCart = ( props ) =>{
                   <p>{shortDescription}</p>
                 </div>
               </section>
-              <button onClick={() => delToCart(id)}>Eliminar Uno</button>
-              <button onClick={() => delToCart(id, true)}>Eliminar Todos</button>
+              <button onClick={() => delToCart(id)}>Quitar Uno</button>
             </div>
           )
         })
