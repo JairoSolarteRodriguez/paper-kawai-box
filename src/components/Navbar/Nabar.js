@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import mainLogo from '../../assets/icons/mainLogo.svg'
 import menuIcon from '../../assets/icons/menuIcon.svg'
-import cartMenu from '../../assets/icons/cartMenu.svg'
 import closeIcon from '../../assets/icons/closeIcon.svg'
 import './navbar.css'
 
