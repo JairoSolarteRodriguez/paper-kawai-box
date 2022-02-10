@@ -44,7 +44,6 @@ export const cartReducer = (state, action) => {
 
     case TYPES.clearCart:{
       return cartInitialState
-
     }
 
     default:

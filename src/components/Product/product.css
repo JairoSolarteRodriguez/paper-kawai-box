@@ -15,15 +15,20 @@ h2{
 }
 
 .product{
-  margin-bottom: 3rem;
+  margin: 1rem;
   background: var(--purple);
   border: 3px solid var(--dark-purple);
   border-radius: 10px;
+  width: 272px;
+}
+
+.product .icon-cart{
+  width: 50px;
 }
 
 .product img{
   width: 100%;
-  width: 272px;
+  max-width: 272px;
   max-height: 180px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
@@ -74,9 +79,8 @@ section{
   width: 60px;
 }
 
-.product button .add-cart{
-  width: 100%;
-  cursor: pointer;
+.all-info{
+  width: 192px;
 }
 
 .show-quantity{

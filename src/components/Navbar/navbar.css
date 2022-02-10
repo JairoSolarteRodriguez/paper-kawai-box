@@ -57,4 +57,28 @@
 
 header{
   height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu-mobile{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .menu-mobile li{
+    margin: 1.5rem;
+    width: auto;
+  }
+
+  .menu-mobile li a:hover{
+    color: var(--purple);
+  }
+
+  .buttonMenuMobile{
+    display: none;
+  }
 }

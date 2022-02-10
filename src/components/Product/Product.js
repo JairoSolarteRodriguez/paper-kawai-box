@@ -8,13 +8,13 @@ const Product = ( { data, addToCart} ) => {
   return<div className='product'>
     <img src={image} alt={name} width='200px'/>
     <div className='info'>
-      <div>
+      <div className='all-info'>
         <h3>{name}</h3>
         <p>{shortDescription}</p>
         <p>${new Intl.NumberFormat("es-CO").format(price * amount)} cop</p>
       </div>
-      <button onClick={() => addToCart(id)}>
-        <img className='add-cart' src={productCartIcon} alt="carrito de producto" />
+      <button className='add-cart' onClick={() => addToCart(id)}>
+        <img className='icon-cart' src={productCartIcon} alt="carrito de producto" />
       </button>
     </div>
   </div>

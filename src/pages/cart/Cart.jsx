@@ -23,9 +23,13 @@ const Cart = ({ data = [], clearCart, delToCart, showCart}) =>{
         data.length === 0 ?
          <VoidCart/> :
         <>
-           <MyCart data={data} delToCart={delToCart} total={total}/>
+          <div className="products-in-cart">
+            <MyCart data={data} delToCart={delToCart} total={total}/>
+          </div>
+          <aside>
            <button className='remove-all' onClick={clearCart}>Eliminar TODOS los productos del carrito</button>
             <a className='validate-order' href={`https://api.whatsapp.com/send/?phone=573105629989&text=${msgFinal}`} target='_blank' rel="noreferrer">Validar Compra por el valor de ${new Intl.NumberFormat("es-CO").format(finalTotal)}</a>
+          </aside>
         </>
       }
     </div>
