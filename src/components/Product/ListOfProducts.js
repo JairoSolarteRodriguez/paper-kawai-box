@@ -54,7 +54,6 @@ const ListOfProducts = () => {
   // Prevent default action
   const onHandleSubmit = (event) => {
     event.preventDefault()
-    setSearch('')
   }
 
   // Filter products, categories and best seller.
@@ -84,7 +83,7 @@ const ListOfProducts = () => {
 
     {
       catSearch ? <h2>{catSearch}</h2> :
-      search ? <h2>{search.toUpperCase()}</h2> :
+      search ? <h2>Busqueda para "{search}"</h2> :
       best ? <h2>Productos mas vendidos</h2> : <h2>Todos los productos</h2>
     }
 

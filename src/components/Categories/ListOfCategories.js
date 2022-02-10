@@ -11,6 +11,9 @@ const Categories = () =>{
          {
            allCategories.map(({ id, name, image, active }) => {
              if(active){
+               if(name === 'Todos los productos'){
+                return <li key={id}><Link to={`/products`}><Category name={name} image={image}/></Link></li>
+               }
                return <li key={id}><Link to={`/products/search/${name}`}><Category name={name} image={image}/></Link></li>
              }else return null;
             })

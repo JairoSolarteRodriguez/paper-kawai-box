@@ -3,7 +3,7 @@ const Category = ( props ) => {
 
   return<>
     <div>
-      <img src={image} alt={name} />
+      <img src={image} alt={name} className='category-image'/>
       <h3>{name}</h3>
     </div>
   </>

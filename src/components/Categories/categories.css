@@ -7,6 +7,15 @@ li, li a div, li a div img{
   margin-top: 130px;
 }
 
+.category-image{
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #3ea2ea44;
+  border: 1px solid var(--yellow);
+}
+
 li a div h3{
   font-size: 1rem;
   text-align: center;
