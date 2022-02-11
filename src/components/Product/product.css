@@ -19,16 +19,16 @@ h2{
   background: var(--purple);
   border: 3px solid var(--dark-purple);
   border-radius: 10px;
-  width: 272px;
+  width: 300px;
 }
 
 .product .icon-cart{
   width: 50px;
+  cursor: pointer;
 }
 
 .product img{
   width: 100%;
-  max-width: 272px;
   max-height: 180px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
